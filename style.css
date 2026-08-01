@@ -1,3 +1,4 @@
+
 *{
 margin:0;
 padding:0;
@@ -7,7 +8,11 @@ font-family:Poppins,sans-serif;
 
 body{
 
-height:100vh;
+margin:0;
+
+padding:20px;
+
+min-height:100vh;
 
 display:flex;
 
@@ -75,25 +80,23 @@ transform:translateY(-800px);
 
 .app{
 
-width:430px;
+width:min(430px,95vw);
 
-height:760px;
-
-backdrop-filter:blur(30px);
+height:min(760px,95vh);
 
 background:rgba(255,255,255,.07);
 
-border:1px solid rgba(255,255,255,.1);
+backdrop-filter:blur(30px);
 
-border-radius:30px;
+border-radius:25px;
 
 display:flex;
 
 flex-direction:column;
 
-box-shadow:0 0 40px rgba(0,255,255,.15);
-
 overflow:hidden;
+
+box-shadow:0 0 40px rgba(0,255,255,.15);
 
 }
 
@@ -418,5 +421,81 @@ color:white;
 cursor:pointer;
 
 font-size:16px;
+
+}
+@media (max-width:768px){
+
+body{
+
+padding:0;
+
+}
+
+.app{
+
+width:100vw;
+
+height:100vh;
+
+border-radius:0;
+
+}
+
+header{
+
+padding:15px;
+
+}
+
+.logo h2{
+
+font-size:20px;
+
+}
+
+.logo p{
+
+font-size:11px;
+
+}
+
+.bot,
+.user{
+
+max-width:90%;
+
+font-size:14px;
+
+padding:12px;
+
+}
+
+.input-area{
+
+padding:12px;
+
+}
+
+.input-area input{
+
+padding:12px;
+
+font-size:15px;
+
+}
+
+.input-area button{
+
+width:50px;
+
+}
+
+.modal-content{
+
+width:90%;
+
+padding:25px;
+
+}
 
 }
